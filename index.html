@@ -6,22 +6,34 @@
     <title>Random quote generator</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500" rel="stylesheet">
   </head>
+
   <body>
     <div class="main">
       <div class="container-fluid">
         <div class="text-center">
           <h1 id="title">Random quote machine</h1>
-          <button class="btn btn-primary" id="quote-button">Generate quote</button>
+
           <div class="row">
-            <div class="col-xs-12 col-md-4 mx-auto">
-                <div id="field" style="margin-top:30px; background-color:#eaeaea;padding: 10px;">
+            <div class="col-xs-12 col-md-6 mx-auto">
+              <div id="buttons">
+                <button class="btn btn-default" id="quote-button">Generate quote</button>
+                <a href="#" id="twitter-button"><button class="btn btn-default">Tweet<i class="fa fa-twitter"></i></button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-6 mx-auto">
+                <div id="field">
                   <p>Click on the button above to get a random quote</p>
                 </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
