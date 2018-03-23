@@ -5,19 +5,19 @@ function newQuote() {
     dataType: "jsonp",
     success: function(json) {
       if (json.quoteAuthor.length === 0) {
-        author = "Unknown";
+        var author = "Unknown";
       } else {
-        author = json.quoteAuthor;
+        var author = json.quoteAuthor;
       }
 
       $("#field").html(`<p>\"${json.quoteText}\"</p><p>${author}</p>`)
-      tweetText = `\"${json.quoteText}\" by ${json.quoteAuthor}`
+      var tweetText = `\"${json.quoteText}\" by ${json.quoteAuthor}`
 
       if (tweetText.length > 280){
-        tweetText = tweetText.slice(0, 280)
+      var tweetText = tweetText.slice(0, 280)
       }
 
-      tweetUrl = `https://twitter.com/intent/tweet?text=+${tweetText}`;
+      const tweetUrl = `https://twitter.com/intent/tweet?text=+${tweetText}`;
       $("#twitter-button").attr("href", tweetUrl);
     },
     error: function(xhr, status, error) {
